@@ -74,8 +74,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 52,
     destaque: true,
     gratuita: false,
-    imagem: 'assets/images/gastronomia.jpg',
-    galeria: ['assets/images/gastronomia.jpg','assets/images/cupping.jpg'],
+    imagem: 'assets/images/jantar-harmonizado.jpg',
+    galeria: ['assets/images/jantar-harmonizado.jpg','assets/images/gastronomia.jpg'],
     tags: ['jantar','harmonização','café','gourmet','Varginha'],
     descricao: 'Menu de 5 tempos criado pelo chef Alexandre Souza, onde cada prato é harmonizado com um café especial diferente produzido no Sul de Minas. Uma experiência que quebra todos os preconceitos sobre o café e revela sua versatilidade: do aperitivo ao digestivo.',
     incluso: ['Menu degustação de 5 tempos','Harmonização com 5 cafés especiais','Apresentação do chef e barista','Receitas do menu'],
@@ -93,7 +93,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Chef Alexandre Souza',
       bio: 'Chef com 15 anos de experiência em culinária regional mineira com técnicas contemporâneas.',
-      foto: 'assets/images/gastronomia.jpg'
+      foto: 'assets/images/jantar-harmonizado.jpg'
     }
   },
 
@@ -119,8 +119,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 78,
     destaque: false,
     gratuita: false,
-    imagem: 'assets/images/gastronomia.jpg',
-    galeria: ['assets/images/gastronomia.jpg','assets/images/cafe-beans.jpg'],
+    imagem: 'assets/images/mercado-varginha.jpg',
+    galeria: ['assets/images/mercado-varginha.jpg','assets/images/gastronomia.jpg'],
     tags: ['mercado','gastronômico','city tour','Varginha'],
     descricao: 'Tour pelos melhores pontos gastronômicos e cafeeiros de Varginha: Mercado Municipal, cafeterias independentes, torrefação histórica e o famoso monumento do ET de Varginha. Um mix de cultura, gastronomia e história local.',
     incluso: ['Guia local especializado','Degustação em 3 estabelecimentos','Ingresso a 1 torrefação histórica'],
@@ -137,7 +137,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Guias de Varginha',
       bio: 'Guias locais credenciados pela Secretaria de Turismo de Varginha. Especialistas na história cafeeira da região.',
-      foto: 'assets/images/gastronomia.jpg'
+      foto: 'assets/images/mercado-varginha.jpg'
     }
   },
 
@@ -163,8 +163,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 224,
     destaque: false,
     gratuita: true,
-    imagem: 'assets/images/cafe-beans.jpg',
-    galeria: ['assets/images/cafe-beans.jpg'],
+    imagem: 'assets/images/cafeteria-especial.jpg',
+    galeria: ['assets/images/cafeteria-especial.jpg'],
     tags: ['gratuita','cafeterias','Varginha','café especial','autoguiada'],
     descricao: 'Mapa autoguiado digital com as melhores cafeterias independentes do centro de Varginha. Cada casa tem sua própria identidade, seleção de cafés especiais e microlotes da temporada. O mapa inclui avaliação dos baristas locais e dicas exclusivas.',
     incluso: ['Mapa digital das cafeterias (gratuito)','Dicas dos baristas locais','Acesso às cafeterias'],
@@ -180,7 +180,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Associação de Cafeterias de Varginha',
       bio: 'Iniciativa coletiva de empreendedores locais que conectam o turista ao universo dos cafés especiais.',
-      foto: 'assets/images/cafe-beans.jpg'
+      foto: 'assets/images/cafeteria-especial.jpg'
     }
   },
 
@@ -206,8 +206,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 61,
     destaque: false,
     gratuita: false,
-    imagem: 'assets/images/cafe-beans.jpg',
-    galeria: ['assets/images/cafe-beans.jpg','assets/images/cupping.jpg'],
+    imagem: 'assets/images/torra-artesanal.jpg',
+    galeria: ['assets/images/torra-artesanal.jpg','assets/images/cafe-beans.jpg'],
     tags: ['torra','café','artesanal','degustação','Varginha'],
     descricao: 'Você vai operar um torrador artesanal e acompanhar em tempo real todas as fases da torra — do verde ao 1° crack, passando pelo desenvolvimento até o ponto ideal. O mestre torrador explica cada detalhe e ao final você degusta e leva o café que você mesmo criou.',
     incluso: ['Torra assistida com mestre torrador','Degustação do café preparado','Café para levar (100g da sua torra)','Lanche típico mineiro'],
@@ -224,7 +224,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Torrefação Mestres do Café — Varginha',
       bio: 'Torrefação especializada em cafés especiais com 20 anos de tradição em Varginha. Referência nacional.',
-      foto: 'assets/images/cafe-beans.jpg'
+      foto: 'assets/images/torra-artesanal.jpg'
     }
   },
 
@@ -252,8 +252,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 44,
     destaque: true,
     gratuita: false,
-    imagem: 'assets/images/hero.jpg',
-    galeria: ['assets/images/hero.jpg','assets/images/cupping.jpg','assets/images/cafe-beans.jpg'],
+    imagem: 'assets/images/cafezal-fazenda.jpg',
+    galeria: ['assets/images/cafezal-fazenda.jpg','assets/images/cupping.jpg','assets/images/cafe-beans.jpg'],
     tags: ['imersão','café especial','fazenda','almoço','Três Pontas'],
     descricao: 'A experiência mais completa do município. Em 6 horas você vai conhecer toda a cadeia produtiva do café na Fazenda Serra Azul — plantio, florada, colheita seletiva, processamento, secagem, torra e preparo. Inclui almoço típico mineiro no fogão a lenha com vista para os cafezais e um cupping final com barista certificado.',
     incluso: ['Tour completo pela cadeia produtiva','Guia agrônomo especializado','Almoço típico mineiro (fogão a lenha)','Cupping final com barista','Transfer saindo do centro','Café especial para levar (200g)'],
@@ -274,7 +274,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Fazenda Serra Azul — Família Costa',
       bio: 'Produtores de café especial classificado entre os melhores de Minas Gerais. Certificados pela BSCA com pontuação acima de 85 pontos.',
-      foto: 'assets/images/hero.jpg'
+      foto: 'assets/images/cafezal-fazenda.jpg'
     }
   },
 
@@ -300,8 +300,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 67,
     destaque: false,
     gratuita: false,
-    imagem: 'assets/images/cafe-beans.jpg',
-    galeria: ['assets/images/cafe-beans.jpg','assets/images/cupping.jpg'],
+    imagem: 'assets/images/degustacao-cafe.jpg',
+    galeria: ['assets/images/degustacao-cafe.jpg','assets/images/cafe-beans.jpg'],
     tags: ['torra','café','artesanal','Três Pontas'],
     descricao: 'Você vai operar um torrador artesanal e acompanhar em tempo real todas as fases da torra. O mestre torrador de Três Pontas — município reconhecido pela qualidade dos seus cafés — explica cada detalhe e ao final você leva o café que torrou.',
     incluso: ['Torra assistida com mestre torrador','Degustação','Café para levar (100g)','Lanche típico'],
@@ -318,7 +318,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Torrefação Mantiqueira — Três Pontas',
       bio: 'Família com 3 gerações de experiência em torra artesanal em Três Pontas.',
-      foto: 'assets/images/cafe-beans.jpg'
+      foto: 'assets/images/degustacao-cafe.jpg'
     }
   },
 
@@ -344,8 +344,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 88,
     destaque: true,
     gratuita: false,
-    imagem: 'assets/images/gastronomia.jpg',
-    galeria: ['assets/images/gastronomia.jpg'],
+    imagem: 'assets/images/almoco-fazenda.jpg',
+    galeria: ['assets/images/almoco-fazenda.jpg'],
     tags: ['gastronomia','almoço','fazenda','culinária mineira','Três Pontas'],
     descricao: 'Uma experiência gastronômica autêntica em uma fazenda de café de Três Pontas. O almoço é preparado no fogão a lenha com receitas passadas de geração em geração: frango ao molho pardo, feijão tropeiro, angu com queijo, couve refogada e doce de leite caseiro. Vista panorâmica para os cafezais incluída.',
     incluso: ['Almoço completo no fogão a lenha (5 pratos + sobremesa)','Café especial da fazenda','Tour rápido pelo cafezal','Receitas para levar'],
@@ -362,7 +362,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Fazenda Boa Esperança — Três Pontas',
       bio: 'Fazenda familiar com produção premiada de café especial e mesa tradicional mineira há 3 gerações.',
-      foto: 'assets/images/gastronomia.jpg'
+      foto: 'assets/images/almoco-fazenda.jpg'
     }
   },
 
@@ -388,8 +388,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 189,
     destaque: false,
     gratuita: false,
-    imagem: 'assets/images/cupping.jpg',
-    galeria: ['assets/images/cupping.jpg','assets/images/cafe-beans.jpg'],
+    imagem: 'assets/images/cafe-beans.jpg',
+    galeria: ['assets/images/cafe-beans.jpg','assets/images/cupping.jpg'],
     tags: ['museu','história','café','cultural','Três Pontas'],
     descricao: 'Um dos mais completos museus sobre a cultura cafeeira do Brasil. Acervo com mais de 2.000 peças históricas, fotografias, equipamentos do século XIX e exposições interativas. O guia transforma a visita em uma viagem no tempo pela história do café em Três Pontas e no Sul de Minas.',
     incluso: ['Ingresso ao museu','Visita guiada de 2h','Café especial ao final da visita'],
@@ -406,7 +406,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Museu do Café — Três Pontas',
       bio: 'Fundado em 1995. Maior acervo cafeeiro do Sul de Minas, tombado pelo patrimônio histórico municipal.',
-      foto: 'assets/images/cupping.jpg'
+      foto: 'assets/images/cafe-beans.jpg'
     }
   },
 
@@ -433,7 +433,7 @@ const EXPERIENCIAS = [
     destaque: false,
     gratuita: false,
     imagem: 'assets/images/trilha.jpg',
-    galeria: ['assets/images/trilha.jpg','assets/images/hero.jpg'],
+    galeria: ['assets/images/trilha.jpg','assets/images/cafezal-fazenda.jpg'],
     tags: ['trilha','natureza','aventura','cafezal','Três Pontas'],
     descricao: 'Trilha de 7km entre os cafezais premiados de Três Pontas com vistas para o campo e as serras ao fundo. O guia explica sobre a produção de café especial, a biodiversidade local e os segredos das fazendas. Termina no mirante com café especial servido na chegada.',
     incluso: ['Guia de trilha certificado','Café especial no mirante','Hidratação no percurso','Seguro de acidente'],
@@ -476,8 +476,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 267,
     destaque: false,
     gratuita: true,
-    imagem: 'assets/images/trilha.jpg',
-    galeria: ['assets/images/trilha.jpg'],
+    imagem: 'assets/images/mirante.jpg',
+    galeria: ['assets/images/mirante.jpg'],
     tags: ['gratuita','autoguiada','mirante','trilha','Três Pontas'],
     descricao: 'Trilha autoguiada de 3,5km com sinalização completa e placas educativas sobre a produção de café especial. O mirante oferece uma vista panorâmica dos cafezais de Três Pontas — perfeita ao nascer do sol. Download do guia de áudio disponível via QR Code no ponto de partida.',
     incluso: ['Acesso gratuito','Sinalização e placas educativas','Guia digital para download'],
@@ -493,7 +493,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Secretaria de Turismo de Três Pontas',
       bio: 'Trilha mantida pela Prefeitura em parceria com a Rota do Café do Sul de Minas.',
-      foto: 'assets/images/trilha.jpg'
+      foto: 'assets/images/mirante.jpg'
     }
   },
 
@@ -521,8 +521,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 73,
     destaque: true,
     gratuita: false,
-    imagem: 'assets/images/trilha.jpg',
-    galeria: ['assets/images/trilha.jpg','assets/images/hero.jpg'],
+    imagem: 'assets/images/cachoeira.jpg',
+    galeria: ['assets/images/cachoeira.jpg','assets/images/trilha.jpg'],
     tags: ['cachoeira','trilha','natureza','aventura','Cambuquira'],
     descricao: 'Uma trilha de 6km que leva até 3 cachoeiras deslumbrantes na Serra de Cambuquira, passando por mata atlântica preservada e pequenas propriedades rurais. O guia é filho de agricultores da região e conta histórias da comunidade ao longo do caminho.',
     incluso: ['Guia local certificado','Hidratação no percurso','Seguro de acidente'],
@@ -540,7 +540,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Ecoturismo Cambuquira',
       bio: 'Guias locais nativos de Cambuquira, parceiros da Reserva da Biosfera da Mata Atlântica.',
-      foto: 'assets/images/trilha.jpg'
+      foto: 'assets/images/cachoeira.jpg'
     }
   },
 
@@ -566,8 +566,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 321,
     destaque: false,
     gratuita: false,
-    imagem: 'assets/images/hero.jpg',
-    galeria: ['assets/images/hero.jpg'],
+    imagem: 'assets/images/parque-aguas.jpg',
+    galeria: ['assets/images/parque-aguas.jpg'],
     tags: ['termal','fontes','relaxamento','bem-estar','Cambuquira'],
     descricao: 'O Parque das Águas de Cambuquira é uma das joias do Circuito das Águas Sul-Mineiro. Passeie pelos jardins históricos do século XIX, experimente as fontes minerais com diferentes propriedades terapêuticas e descanse na beleza da estância.',
     incluso: ['Ingresso ao Parque das Águas','Acesso às fontes minerais','Guia de uso das fontes'],
@@ -583,7 +583,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Parque das Águas — Cambuquira',
       bio: 'Patrimônio histórico de Cambuquira, o Parque das Águas integra o Circuito das Águas Sul-Mineiro.',
-      foto: 'assets/images/hero.jpg'
+      foto: 'assets/images/parque-aguas.jpg'
     }
   },
 
@@ -609,8 +609,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 39,
     destaque: false,
     gratuita: false,
-    imagem: 'assets/images/cupping.jpg',
-    galeria: ['assets/images/cupping.jpg','assets/images/hero.jpg'],
+    imagem: 'assets/images/spa-aguas-cafe.jpg',
+    galeria: ['assets/images/spa-aguas-cafe.jpg','assets/images/cupping.jpg'],
     tags: ['café','águas','integrado','Cambuquira'],
     descricao: 'A experiência que une os dois grandes tesouros de Cambuquira: o café especial e as águas minerais. Você começa com um cupping de cafés locais, visita uma pequena propriedade produtora de café, e termina com uma sessão relaxante no Parque das Águas.',
     incluso: ['Cupping de cafés de Cambuquira e região','Visita guiada a propriedade produtora','Ingresso ao Parque das Águas','Café especial para levar (100g)'],
@@ -627,7 +627,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Rota do Café — Cambuquira',
       bio: 'Parceria entre produtores de café e o Parque das Águas para oferecer uma experiência única em Cambuquira.',
-      foto: 'assets/images/cupping.jpg'
+      foto: 'assets/images/spa-aguas-cafe.jpg'
     }
   },
 
@@ -653,8 +653,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 96,
     destaque: false,
     gratuita: false,
-    imagem: 'assets/images/gastronomia.jpg',
-    galeria: ['assets/images/gastronomia.jpg'],
+    imagem: 'assets/images/queijo.jpg',
+    galeria: ['assets/images/queijo.jpg'],
     tags: ['gastronomia','almoço','sítio','culinária mineira','Cambuquira'],
     descricao: 'Um almoço caipira de verdade: tudo preparado no fogão a lenha, com ingredientes do próprio sítio. Frango caipira, angu, couve, feijão preto, queijo minas fresco e doces artesanais. A dona da casa recebe os visitantes como família.',
     incluso: ['Almoço completo (4 pratos + sobremesa)','Café especial da casa','Visita ao quintal e horta'],
@@ -670,7 +670,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Sítio Dona Lurdes — Cambuquira',
       bio: 'Dona Lurdes e sua família recebem visitantes há 10 anos no sítio. Culinária 100% artesanal, sem industrializados.',
-      foto: 'assets/images/gastronomia.jpg'
+      foto: 'assets/images/queijo.jpg'
     }
   },
 
@@ -696,8 +696,8 @@ const EXPERIENCIAS = [
     totalAvaliacoes: 198,
     destaque: false,
     gratuita: true,
-    imagem: 'assets/images/hero.jpg',
-    galeria: ['assets/images/hero.jpg'],
+    imagem: 'assets/images/centro-historico.jpg',
+    galeria: ['assets/images/centro-historico.jpg'],
     tags: ['gratuita','autoguiada','centro histórico','Cambuquira'],
     descricao: 'Roteiro autoguiado pela arquitetura eclética do centro histórico de Cambuquira, passando pela Praça Dr. Pio X, a Igreja Matriz, o Chafariz histórico, o Coreto e as casarões do início do século XX que fazem da cidade um cartão-postal.',
     incluso: ['Roteiro gratuito para download','Guia de áudio via QR Code'],
@@ -713,7 +713,7 @@ const EXPERIENCIAS = [
     anfitriao: {
       nome: 'Secretaria de Turismo de Cambuquira',
       bio: 'Roteiro desenvolvido pelo município em parceria com o Instituto do Patrimônio Histórico de Minas Gerais.',
-      foto: 'assets/images/hero.jpg'
+      foto: 'assets/images/centro-historico.jpg'
     }
   }
 ];
@@ -729,7 +729,7 @@ const ROTEIROS = [
     preco: 380,
     nivel: 'Fácil',
     destaque: true,
-    imagem: 'assets/images/cafe-beans.jpg',
+    imagem: 'assets/images/varginha-cidade.jpg',
     descricao: 'Mergulhe no universo cafeeiro de Varginha: cupping com barista campeão, rota pelos mercados e um jantar harmonizado para encerrar com chave de ouro.',
     experiencias: [1, 3, 2]
   },
@@ -743,7 +743,7 @@ const ROTEIROS = [
     preco: 300,
     nivel: 'Moderado',
     destaque: true,
-    imagem: 'assets/images/hero.jpg',
+    imagem: 'assets/images/imersao-tres-pontas.jpg',
     descricao: 'Conheça toda a cadeia produtiva do café premiado de Três Pontas: fazenda, torra e degustação em um único dia.',
     experiencias: [6, 8, 9]
   },
@@ -757,7 +757,7 @@ const ROTEIROS = [
     preco: 310,
     nivel: 'Fácil',
     destaque: false,
-    imagem: 'assets/images/trilha.jpg',
+    imagem: 'assets/images/aguas-cafezais.jpg',
     descricao: 'Cachoeiras, fontes minerais e café especial — o melhor de Cambuquira em dois dias de pura desconexão.',
     experiencias: [12, 14, 15, 13]
   },
@@ -785,7 +785,7 @@ const ROTEIROS = [
     preco: 680,
     nivel: 'Fácil',
     destaque: false,
-    imagem: 'assets/images/gastronomia.jpg',
+    imagem: 'assets/images/premium-gastronomia.jpg',
     descricao: 'Para os amantes de gastronomia e café: torra assistida, cupping, almoço na fazenda e jantar harmonizado — o melhor dos sabores do Sul de Minas.',
     experiencias: [5, 1, 8, 2, 7]
   }

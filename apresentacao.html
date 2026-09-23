@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apresentação — Rota do Café do Sul de Minas</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%98%95</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cafe-escuro:#1E1008; --cafe-profundo:#2C1810; --cafe-medio:#6B3A2A; --cafe-claro:#8B5E3C;
+  --dourado:#C8963E; --dourado-claro:#E8B86D; --dourado-pale:#F5D89A;
+  --verde-escuro:#2D5016; --verde-medio:#4A7C2F;
+  --creme:#F5EDD6; --areia:#D4C5A9; --cinza-quente:#8A7B6E; --branco-quente:#FEFAF3;
+  --font-serif:'Playfair Display',Georgia,serif; --font-sans:'Inter',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);background:var(--cafe-escuro);color:var(--branco-quente);overflow-x:hidden}
+img{max-width:100%;display:block}
+
+.slide{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:5rem 6vw;
+  position:relative;
+  scroll-snap-align:start;
+}
+.slides{scroll-snap-type:y proximity}
+.slide-inner{max-width:1080px;width:100%;}
+.eyebrow{
+  display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--dourado-claro);margin-bottom:1.25rem;
+}
+h1{font-family:var(--font-serif);font-weight:800;line-height:1.05;color:var(--branco-quente)}
+h2{font-family:var(--font-serif);font-weight:700;color:var(--branco-quente);line-height:1.15}
+p.lead{font-size:1.25rem;line-height:1.7;color:rgba(245,237,214,.88);max-width:760px}
+.badge-min{
+  position:fixed;top:1.5rem;right:1.5rem;z-index:50;font-size:.7rem;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--cafe-escuro);
+  background:linear-gradient(135deg,var(--dourado),var(--dourado-claro));
+  padding:.5rem 1rem;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.3);
+}
+
+/* progress dots */
+.dots{position:fixed;right:1.75rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.6rem;z-index:50}
+.dots button{width:9px;height:9px;border-radius:50%;border:1.5px solid rgba(245,237,214,.5);background:transparent;cursor:pointer;padding:0;transition:all .25s}
+.dots button.active{background:var(--dourado);border-color:var(--dourado);transform:scale(1.3)}
+
+/* ===== SLIDE 1 — CAPA ===== */
+#s1{
+  background:
+    linear-gradient(180deg,rgba(26,16,11,.55) 0%,rgba(26,16,11,.85) 100%),
+    url('assets/images/hero.jpg') center/cover no-repeat;
+  text-align:center;align-items:center;
+}
+#s1 .logo-mark{font-size:3rem;margin-bottom:1rem}
+#s1 h1{font-size:clamp(2.6rem,6vw,4.6rem);margin-bottom:1rem}
+#s1 h1 em{color:var(--dourado-claro);font-style:italic}
+#s1 p.lead{margin:0 auto 2.5rem;text-align:center}
+#s1 .cities{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;font-size:.85rem;color:var(--dourado-pale);font-weight:600;letter-spacing:.04em}
+#s1 .cities span::after{content:'•';margin-left:.75rem;color:rgba(245,237,214,.4)}
+#s1 .cities span:last-child::after{content:''}
+#s1 .credit{margin-top:3.5rem;font-size:.8rem;color:rgba(245,237,214,.65);letter-spacing:.03em}
+#s1 .scroll-hint{position:absolute;bottom:2.5rem;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,237,214,.55);animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ===== SLIDE 2 — PROBLEMA ===== */
+#s2{background:var(--cafe-profundo)}
+#s2 .compare{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.5rem}
+.compare-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:2.25rem}
+.compare-card h3{font-family:var(--font-serif);font-size:1.3rem;margin-bottom:1rem}
+.compare-card.no h3{color:#E88A8A}
+.compare-card.yes h3{color:var(--verde-medio);}
+.compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.compare-card li{font-size:.95rem;color:rgba(245,237,214,.82);display:flex;gap:.6rem;align-items:flex-start}
+.compare-card.no li::before{content:'✕';color:#E88A8A;font-weight:700;flex-shrink:0}
+.compare-card.yes li::before{content:'✓';color:var(--verde-medio);font-weight:700;flex-shrink:0}
+
+/* ===== SLIDE 3 — O QUE A PLATAFORMA OFERECE ===== */
+#s3{background:linear-gradient(180deg,var(--cafe-escuro),var(--cafe-profundo))}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2.75rem}
+.feat{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:1.5rem 1.25rem;text-align:left;transition:transform .2s}
+.feat .ic{font-size:1.6rem;margin-bottom:.75rem;display:block}
+.feat h4{font-size:.95rem;font-weight:700;margin-bottom:.35rem;color:var(--branco-quente)}
+.feat p{font-size:.8rem;color:rgba(245,237,214,.7);line-height:1.5}
+
+/* ===== SLIDE 4 — AS TRÊS CIDADES ===== */
+#s4{background:var(--cafe-profundo)}
+.city-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;margin-top:2.75rem}
+.city-card2{border-radius:18px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.city-card2 .img{height:190px;background-size:cover;background-position:center}
+.city-card2 .body{padding:1.4rem}
+.city-card2 h3{font-family:var(--font-serif);font-size:1.25rem;margin-bottom:.4rem}
+.city-card2 p{font-size:.85rem;color:rgba(245,237,214,.75);line-height:1.55}
+.city-card2 .tag{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--dourado-pale);background:rgba(200,150,62,.18);padding:.3rem .7rem;border-radius:999px;margin-bottom:.6rem}
+
+/* ===== SLIDE 5 — COMO FUNCIONA ===== */
+#s5{background:linear-gradient(180deg,var(--cafe-profundo),var(--cafe-escuro))}
+.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.75rem;counter-reset:step}
+.step2{text-align:left}
+.step2 .num{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--dourado),var(--dourado-claro));color:var(--cafe-profundo);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-weight:800;font-size:1.15rem;margin-bottom:1rem}
+.step2 h4{font-size:1rem;margin-bottom:.4rem}
+.step2 p{font-size:.85rem;color:rgba(245,237,214,.72);line-height:1.5}
+
+/* ===== SLIDE 6 — NUMEROS ===== */
+#s6{background:var(--cafe-escuro);text-align:center}
+.stat-row{display:flex;justify-content:center;gap:4.5rem;flex-wrap:wrap;margin-top:2.5rem}
+.stat2{display:flex;flex-direction:column;gap:.35rem}
+.stat2 strong{font-family:var(--font-serif);font-size:3rem;color:var(--dourado-claro)}
+.stat2 span{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(245,237,214,.7)}
+
+/* ===== SLIDE 7 — FECHAMENTO ===== */
+#s7{
+  background:
+    linear-gradient(180deg,rgba(26,16,11,.75),rgba(26,16,11,.92)),
+    url('assets/images/cafezal-fazenda.jpg') center/cover no-repeat;
+  text-align:center;align-items:center;
+}
+#s7 h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1.25rem}
+#s7 .url-box{
+  display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  padding:1rem 1.75rem;border-radius:999px;font-size:1.1rem;font-weight:600;margin:1.5rem 0 2.5rem;letter-spacing:.02em;
+}
+#s7 .url-box .dot{width:8px;height:8px;border-radius:50%;background:var(--verde-medio)}
+#s7 .credit2{font-size:.85rem;color:rgba(245,237,214,.7)}
+#s7 .credit2 strong{color:var(--dourado-claro)}
+
+@media (max-width:900px){
+  .compare{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .city-grid{grid-template-columns:1fr}
+  .steps-row{grid-template-columns:repeat(2,1fr)}
+  .stat-row{gap:2.25rem}
+  .dots{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="badge-min">Apresentação · não indexado</div>
+<nav class="dots" id="dots"></nav>
+
+<main class="slides">
+
+  <section class="slide" id="s1">
+    <div class="slide-inner">
+      <div class="logo-mark">☕</div>
+      <h1>Rota do Café <em>do Sul de Minas</em></h1>
+      <p class="lead">Uma plataforma de experiências turísticas que transforma atrativos regionais em produtos comercializáveis — com preço, duração, dias disponíveis e reserva online.</p>
+      <div class="cities"><span>Varginha</span><span>Três Pontas</span><span>Cambuquira</span></div>
+      <div class="credit">Desenvolvido por NEXT · CEFET-MG Campus Varginha</div>
+    </div>
+    <div class="scroll-hint">Role para começar ↓</div>
+  </section>
+
+  <section class="slide" id="s2">
+    <div class="slide-inner">
+      <span class="eyebrow">O Problema</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);max-width:820px;margin-bottom:1rem">O turismo do café no Sul de Minas tem atrativo — mas não tem vitrine.</h2>
+      <p class="lead" style="margin-bottom:0">A maioria dos sites turísticos da região é apenas institucional: fotos bonitas, texto genérico, e nenhuma forma real de contratar um passeio.</p>
+      <div class="compare">
+        <div class="compare-card no">
+          <h3>Site institucional comum</h3>
+          <ul>
+            <li>Lista atrativos sem preço ou disponibilidade</li>
+            <li>Nenhum canal de reserva</li>
+            <li>Turista precisa ligar, procurar, adivinhar</li>
+            <li>Produtor local fica invisível</li>
+          </ul>
+        </div>
+        <div class="compare-card yes">
+          <h3>Rota do Café</h3>
+          <ul>
+            <li>Cada experiência é um produto: preço, duração, dias</li>
+            <li>Reserva direta via WhatsApp, sem fricção</li>
+            <li>Filtros por cidade, categoria, orçamento</li>
+            <li>Vitrine para produtores e operadores credenciados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s3">
+    <div class="slide-inner">
+      <span class="eyebrow">A Plataforma</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);max-width:760px">O que o visitante encontra</h2>
+      <div class="feat-grid">
+        <div class="feat"><span class="ic">🚶</span><h4>Passeios & roteiros prontos</h4><p>Itinerários de 1 a 3 dias conectando os três municípios.</p></div>
+        <div class="feat"><span class="ic">🧑‍🏫</span><h4>Experiências com guia</h4><p>Cupping, fazendas históricas, trilhas guiadas.</p></div>
+        <div class="feat"><span class="ic">🍽️</span><h4>Gastronomia local</h4><p>Almoços na roça, jantares harmonizados, queijarias.</p></div>
+        <div class="feat"><span class="ic">🧺</span><h4>Produtos artesanais</h4><p>Café especial, mercados e feiras regionais.</p></div>
+        <div class="feat"><span class="ic">🎉</span><h4>Eventos</h4><p>Agenda cultural e cafeeira da região.</p></div>
+        <div class="feat"><span class="ic">✨</span><h4>Experiências gratuitas</h4><p>Trilhas e mirantes autoguiados, sem custo.</p></div>
+        <div class="feat"><span class="ic">💰</span><h4>Preço, duração e dias</h4><p>Ficha técnica completa em cada experiência.</p></div>
+        <div class="feat"><span class="ic">📅</span><h4>Reserva online</h4><p>Formulário de solicitação direto via WhatsApp.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s4">
+    <div class="slide-inner">
+      <span class="eyebrow">Território</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Três polos, uma rota</h2>
+      <div class="city-grid">
+        <div class="city-card2">
+          <div class="img" style="background-image:url('assets/images/cupping.jpg')"></div>
+          <div class="body">
+            <span class="tag">Capital do Café</span>
+            <h3>Varginha</h3>
+            <p>Cooperativas, torra, cupping sensorial e cafeterias de café especial.</p>
+          </div>
+        </div>
+        <div class="city-card2">
+          <div class="img" style="background-image:url('assets/images/cafezal-fazenda.jpg')"></div>
+          <div class="body">
+            <span class="tag">Cafés Premiados</span>
+            <h3>Três Pontas</h3>
+            <p>Fazendas centenárias, cafezais em florada e vivência da colheita.</p>
+          </div>
+        </div>
+        <div class="city-card2">
+          <div class="img" style="background-image:url('assets/images/parque-aguas.jpg')"></div>
+          <div class="body">
+            <span class="tag">Águas & Montanhas</span>
+            <h3>Cambuquira</h3>
+            <p>Fontes hidrotermais, serra e cafés de altitude.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s5">
+    <div class="slide-inner">
+      <span class="eyebrow">Fluxo de Reserva</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Do interesse à confirmação</h2>
+      <div class="steps-row">
+        <div class="step2"><div class="num">1</div><h4>Escolhe a experiência</h4><p>Filtra por cidade, categoria, duração e preço.</p></div>
+        <div class="step2"><div class="num">2</div><h4>Vê os detalhes</h4><p>Inclusos, dias de funcionamento, transporte.</p></div>
+        <div class="step2"><div class="num">3</div><h4>Preenche a reserva</h4><p>Data, horário e número de participantes.</p></div>
+        <div class="step2"><div class="num">4</div><h4>Confirma via WhatsApp</h4><p>Operador local confirma disponibilidade e pagamento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s6">
+    <div class="slide-inner">
+      <span class="eyebrow">Catálogo Piloto</span>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem)">Em números</h2>
+      <div class="stat-row">
+        <div class="stat2"><strong>16</strong><span>Experiências cadastradas</span></div>
+        <div class="stat2"><strong>5</strong><span>Roteiros prontos</span></div>
+        <div class="stat2"><strong>3</strong><span>Municípios polo</span></div>
+        <div class="stat2"><strong>100%</strong><span>Reserva via WhatsApp</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="s7">
+    <div class="slide-inner">
+      <span class="eyebrow" style="color:var(--dourado-claro)">Conheça a plataforma</span>
+      <h2>Da vitrine à reserva, em poucos cliques.</h2>
+      <div class="url-box"><span class="dot"></span> lazarodu.github.io/RotaCafeSulMinas</div>
+      <p class="credit2">Rota do Café do Sul de Minas · Desenvolvido por <strong>NEXT — CEFET-MG Campus Varginha</strong></p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const dotsWrap = document.getElementById('dots');
+  slides.forEach((s,i)=>{
+    const b = document.createElement('button');
+    b.setAttribute('aria-label','Slide '+(i+1));
+    b.addEventListener('click',()=>s.scrollIntoView({behavior:'smooth'}));
+    dotsWrap.appendChild(b);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const idx = slides.indexOf(e.target);
+        dots.forEach(d=>d.classList.remove('active'));
+        if(dots[idx]) dots[idx].classList.add('active');
+      }
+    });
+  }, {threshold:0.5});
+  slides.forEach(s=>io.observe(s));
+
+  document.addEventListener('keydown', (e)=>{
+    const current = slides.findIndex(s=>{
+      const r = s.getBoundingClientRect();
+      return r.top >= -50 && r.top < window.innerHeight/2;
+    });
+    if(e.key==='ArrowDown' || e.key==='PageDown'){
+      e.preventDefault();
+      const next = slides[Math.min(current+1, slides.length-1)];
+      if(next) next.scrollIntoView({behavior:'smooth'});
+    }
+    if(e.key==='ArrowUp' || e.key==='PageUp'){
+      e.preventDefault();
+      const prev = slides[Math.max(current-1,0)];
+      if(prev) prev.scrollIntoView({behavior:'smooth'});
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
