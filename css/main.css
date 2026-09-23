@@ -143,6 +143,8 @@
   gap: var(--space-10);
   padding-bottom: var(--space-10);
 }
+.footer .logo-title { color: var(--creme); }
+.footer .logo-subtitle { color: var(--areia); }
 .brand-col p { line-height: 1.7; }
 .footer-badges { display: flex; gap: var(--space-2); flex-wrap: wrap; }
 .footer-col h4 {
