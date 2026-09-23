@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Detalhes da Experiência — Rota do Café</title>
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">☕</span>
+        <div class="logo-text">
+          <span class="logo-title">Rota do Café</span>
+          <span class="logo-subtitle">Sul de Minas Gerais</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="experiencias.html">Experiências</a>
+        <a href="roteiros.html">Roteiros Prontos</a>
+        <a href="sobre.html">Sobre a Região</a>
+        <a href="experiencias.html?preco=free" class="nav-highlight">Gratuitos</a>
+      </nav>
+      <div class="header-actions">
+        <a href="experiencias.html" class="btn btn-primary btn-sm">Explorar Passeios</a>
+        <button class="mobile-toggle" aria-label="Menu Mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <main id="expContainer" class="exp-detail-page py-8">
+    <div class="container">
+      
+      <!-- Topo: Breadcrumb e Título -->
+      <nav class="breadcrumb mb-4">
+        <a href="index.html">Início</a> &gt; 
+        <a href="experiencias.html">Experiências</a> &gt; 
+        <span id="expTitle">Experiência</span>
+      </nav>
+
+      <div class="exp-header-info mb-6">
+        <div class="flex-between align-center">
+          <span id="expCity" class="badge badge-dourado text-sm">📍 Município</span>
+          <span id="expRating" class="rating-stars text-sm">★ 4.9</span>
+        </div>
+        <h1 id="expTitle" class="mt-2">Carregando experiência...</h1>
+        <p id="expSubtitle" class="lead text-muted"></p>
+      </div>
+
+      <!-- Grid Principal: Detalhes + Barra de Reserva -->
+      <div class="exp-layout">
+        
+        <!-- Coluna Esquerda: Fotos, Conteúdo, Inclusos -->
+        <div class="exp-main-col">
+          <div class="exp-hero-img-box mb-6">
+            <img id="expHeroImg" src="assets/images/hero.jpg" alt="Foto da Experiência">
+          </div>
+
+          <section class="exp-section">
+            <h3>Sobre a Experiência</h3>
+            <div id="expDescFull"></div>
+          </section>
+
+          <section class="exp-section">
+            <h3>O que está incluso</h3>
+            <ul id="expInclusos" class="inclusos-list"></ul>
+          </section>
+
+          <section class="exp-section">
+            <h3>O que NÃO está incluso</h3>
+            <ul id="expNaoInclusos" class="nao-inclusos-list"></ul>
+          </section>
+
+          <section class="exp-section">
+            <h3>Informações Importantes</h3>
+            <div class="info-box-highlight">
+              <p><strong>Cancelamento gratuito:</strong> Até 48h antes da data agendada.</p>
+              <p><strong>O que levar:</strong> Calçado fechado e confortável, protetor solar, repelente e garrafa de água.</p>
+              <p><strong>Acessibilidade:</strong> Em fazendas históricas, consultar previamente com a equipe receptiva caso haja participantes com mobilidade reduzida.</p>
+            </div>
+          </section>
+
+          <!-- Outras experiências no mesmo município -->
+          <section class="exp-section mt-8">
+            <h3>Outras experiências neste município</h3>
+            <div id="relatedGrid" class="grid-3 mt-4"></div>
+          </section>
+        </div>
+
+        <!-- Coluna Direita: Box de Reserva Flutuante -->
+        <aside class="exp-booking-sidebar">
+          <div class="booking-card shadow-lg">
+            <div class="booking-header">
+              <span class="text-xs uppercase tracking-wider text-muted">Valor por participante</span>
+              <div id="bookingPriceDisplay" class="booking-price-val">R$ 0,00</div>
+            </div>
+
+            <!-- Ficha Técnica Rápida -->
+            <div class="booking-specs">
+              <div class="spec-row">
+                <span>⏱️ Duração:</span>
+                <strong id="specDuration">-</strong>
+              </div>
+              <div class="spec-row">
+                <span>🧑‍🏫 Guia:</span>
+                <strong id="specGuide">-</strong>
+              </div>
+              <div class="spec-row">
+                <span>🚐 Transporte:</span>
+                <strong id="specTransport">-</strong>
+              </div>
+              <div class="spec-row">
+                <span>📅 Dias:</span>
+                <strong id="specDays">-</strong>
+              </div>
+              <div class="spec-row">
+                <span>👥 Grupo:</span>
+                <strong id="specMinMax">-</strong>
+              </div>
+            </div>
+
+            <!-- Formulário de Solicitação de Reserva -->
+            <form id="bookingForm" class="booking-form mt-4">
+              <h4 class="font-bold text-sm mb-3">Solicitar Reserva Online</h4>
+              
+              <div class="form-group mb-3">
+                <label for="bookDate">Data do Passeio *</label>
+                <input type="date" id="bookDate" required class="form-input">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="bookTime">Horário Disponível *</label>
+                <select id="bookTime" required class="form-select"></select>
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="bookPersons">Número de Pessoas *</label>
+                <input type="number" id="bookPersons" value="2" min="1" max="30" required class="form-input">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="bookName">Seu Nome Completo *</label>
+                <input type="text" id="bookName" placeholder="Ex: Maria da Silva" required class="form-input">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="bookEmail">E-mail para confirmação *</label>
+                <input type="email" id="bookEmail" placeholder="maria@email.com" required class="form-input">
+              </div>
+
+              <div class="form-group mb-3">
+                <label for="bookPhone">WhatsApp / Telefone *</label>
+                <input type="tel" id="bookPhone" placeholder="(35) 99999-9999" required class="form-input">
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="bookNotes">Observações ou Necessidades Especiais</label>
+                <textarea id="bookNotes" rows="2" placeholder="Restrições alimentares, crianças, idosos..." class="form-input"></textarea>
+              </div>
+
+              <div class="booking-total-summary flex-between align-center p-3 mb-4 bg-light rounded">
+                <span class="text-sm font-bold">Total Estimado:</span>
+                <span id="bookTotalAmount" class="font-bold text-cafe text-lg">R$ 0,00</span>
+              </div>
+
+              <button type="submit" id="submitBooking" class="btn btn-whatsapp w-full py-3">
+                <span>💬 Solicitar Reserva via WhatsApp</span>
+              </button>
+              
+              <p class="text-xs text-center text-muted mt-2">
+                🔒 Confirmação direta com o operador local credenciado. Sem taxas ocultas.
+              </p>
+            </form>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="logo mb-4">
+          <span class="logo-icon">☕</span>
+          <div class="logo-text">
+            <span class="logo-title">Rota do Café</span>
+            <span class="logo-subtitle">Sul de Minas</span>
+          </div>
+        </div>
+        <p class="text-sm text-muted">
+          Plataforma oficial de conexão de turistas a experiências, vivências rurais e gastronomia em <strong>Varginha</strong>, <strong>Três Pontas</strong> e <strong>Cambuquira</strong>.
+        </p>
+        <div class="footer-badges mt-4">
+          <span class="badge badge-cafe">Sebrae Minas</span>
+          <span class="badge badge-verde">Circuito das Águas</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Municípios</h4>
+        <ul>
+          <li><a href="experiencias.html?municipio=Varginha">Varginha — Capital do Café</a></li>
+          <li><a href="experiencias.html?municipio=Tr%C3%AAs+Pontas">Três Pontas — Cafés Premiados</a></li>
+          <li><a href="experiencias.html?municipio=Cambuquira">Cambuquira — Águas Minerais & Serra</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="experiencias.html?categoria=fazenda">Fazendas Históricas & Cupping</a></li>
+          <li><a href="experiencias.html?categoria=gastronomia">Gastronomia & Queijos</a></li>
+          <li><a href="experiencias.html?categoria=aventura">Aventura & Trilhas</a></li>
+          <li><a href="experiencias.html?categoria=cultural">Cultural & Artesanato</a></li>
+          <li><a href="experiencias.html?preco=free">Experiências Autoguiadas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento & Central</h4>
+        <p class="text-sm text-muted mb-3">Dúvidas sobre reservas e roteiros personalizados:</p>
+        <a href="https://wa.me/5535999887766" target="_blank" class="btn btn-whatsapp btn-sm">
+          <span>💬 Central WhatsApp</span>
+        </a>
+        <p class="text-xs text-muted mt-3">Seg a Sáb das 08h às 18h</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p class="text-xs text-muted">© 2026 Rota do Café do Sul de Minas. Projeto Piloto de Comercialização Turística.</p>
+        <p class="text-xs text-muted">Desenvolvido com padrão de excelência Sebrae.</p>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/experience.js"></script>
+</body>
+</html>

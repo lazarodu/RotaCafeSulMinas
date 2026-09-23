@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Rota do Café — Sul de Minas Gerais | Experiências, Passeios e Roteiros</title>
+  <meta name="description" content="Descubra e reserve passeios, cupping de cafés especiais, vivências em fazendas históricas e gastronomia em Varginha, Três Pontas e Cambuquira.">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">☕</span>
+        <div class="logo-text">
+          <span class="logo-title">Rota do Café</span>
+          <span class="logo-subtitle">Sul de Minas Gerais</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="experiencias.html">Experiências</a>
+        <a href="roteiros.html">Roteiros Prontos</a>
+        <a href="sobre.html">Sobre a Região</a>
+        <a href="experiencias.html?preco=free" class="nav-highlight">Gratuitos</a>
+      </nav>
+      <div class="header-actions">
+        <a href="experiencias.html" class="btn btn-primary btn-sm">Explorar Passeios</a>
+        <button class="mobile-toggle" aria-label="Menu Mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" style="background: linear-gradient(rgba(26,16,11,0.65), rgba(26,16,11,0.85)), url('assets/images/hero.jpg') center/cover no-repeat;">
+    <div class="container hero-content">
+      <span class="hero-tag">Sul de Minas Gerais • Varginha • Três Pontas • Cambuquira</span>
+      <h1 class="hero-title">Onde o melhor café do mundo encontra histórias inesquecíveis.</h1>
+      <p class="hero-sub">
+        Transformamos a tradição cafeeira e as riquezas naturais do Sul de Minas em experiências completas: deguste cafés especiais nas fazendas, viva a colheita, saboreie a culinária mineira e reserve direto online.
+      </p>
+
+      <!-- BARRA DE BUSCA RÁPIDA -->
+      <form class="hero-search-box" action="experiencias.html" method="GET">
+        <div class="search-field">
+          <label>📍 Destino</label>
+          <select name="municipio">
+            <option value="all">Todos os municípios</option>
+            <option value="Varginha">Varginha</option>
+            <option value="Três Pontas">Três Pontas</option>
+            <option value="Cambuquira">Cambuquira</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>☕ Tipo de Experiência</label>
+          <select name="categoria">
+            <option value="all">Todas as categorias</option>
+            <option value="fazenda">Fazendas & Cupping</option>
+            <option value="gastronomia">Gastronomia & Queijos</option>
+            <option value="aventura">Natureza & Trilhas</option>
+            <option value="cultural">Cultura & Artesanato</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label>💰 Orçamento</label>
+          <select name="preco">
+            <option value="all">Qualquer valor</option>
+            <option value="free">Gratuito</option>
+            <option value="0-100">Até R$ 100</option>
+            <option value="100-200">R$ 100 a R$ 200</option>
+            <option value="200+">Acima de R$ 200</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary search-submit-btn">
+          🔍 Buscar Experiências
+        </button>
+      </form>
+
+      <!-- STATS -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <strong>+18</strong>
+          <span>Experiências cadastradas</span>
+        </div>
+        <div class="stat-item">
+          <strong>3</strong>
+          <span>Cidades polo do café</span>
+        </div>
+        <div class="stat-item">
+          <strong>100%</strong>
+          <span>Produtores locais verificados</span>
+        </div>
+        <div class="stat-item">
+          <strong>★ 4.9</strong>
+          <span>Avaliação média dos turistas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUNICÍPIOS PRIORITÁRIOS -->
+  <section class="section-padded bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-cafe">Território dos Cafés Especiais</span>
+        <h2>Explore os 3 Municípios Prioritários</h2>
+        <p>Cada cidade possui uma vocação única na rota do café e das águas minerais do Sul de Minas.</p>
+      </div>
+
+      <div class="grid-3 city-cards-grid">
+        <!-- Varginha -->
+        <div class="city-card">
+          <div class="city-card-img" style="background-image: url('assets/images/cupping.jpg');">
+            <span class="city-badge">Capital Mundial do Café</span>
+          </div>
+          <div class="city-card-body">
+            <h3>Varginha</h3>
+            <p>O coração comercial e tecnológico do café. Visite a Cooperativa Minasul, prove microlotes premiados e participe de sessões profissionais de cupping sensorial.</p>
+            <ul class="city-features">
+              <li>✓ Centros de torra e laboratórios de análise</li>
+              <li>✓ Cafeterias de cafés especiais e bistrôs</li>
+              <li>✓ Fácil acesso e infraestrutura hoteleira completa</li>
+            </ul>
+            <a href="experiencias.html?municipio=Varginha" class="btn btn-outline btn-sm w-full mt-4">Ver Experiências em Varginha →</a>
+          </div>
+        </div>
+
+        <!-- Três Pontas -->
+        <div class="city-card">
+          <div class="city-card-img" style="background-image: url('assets/images/cafe-beans.jpg');">
+            <span class="city-badge">Terra do Café Premiado</span>
+          </div>
+          <div class="city-card-body">
+            <h3>Três Pontas</h3>
+            <p>Berço dos melhores cafés do mundo e de rica tradição rural. Conheça fazendas centenárias, cafezais em florada, processos artesanais de secagem e colheita.</p>
+            <ul class="city-features">
+              <li>✓ Fazendas históricas com visitas guiadas</li>
+              <li>✓ Rota da florada e vivência da colheita</li>
+              <li>✓ Almoços da roça com fogão a lenha autêntico</li>
+            </ul>
+            <a href="experiencias.html?municipio=Tr%C3%AAs+Pontas" class="btn btn-outline btn-sm w-full mt-4">Ver Experiências em Três Pontas →</a>
+          </div>
+        </div>
+
+        <!-- Cambuquira -->
+        <div class="city-card">
+          <div class="city-card-img" style="background-image: url('assets/images/trilha.jpg');">
+            <span class="city-badge">Águas & Montanhas</span>
+          </div>
+          <div class="city-card-body">
+            <h3>Cambuquira</h3>
+            <p>Famosa por suas fontes hidrotermais e pela Serra do Piripau. Harmonize o café arábica de altitude com a água mineral mais pura do planeta e natureza exuberante.</p>
+            <ul class="city-features">
+              <li>✓ Parque das Águas Minerais e fontes medicinais</li>
+              <li>✓ Mirantes a mais de 1.300m e voo livre</li>
+              <li>✓ Cafés de montanha e queijarias artesanais</li>
+            </ul>
+            <a href="experiencias.html?municipio=Cambuquira" class="btn btn-outline btn-sm w-full mt-4">Ver Experiências em Cambuquira →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIAS EM DESTAQUE -->
+  <section class="section-padded">
+    <div class="container">
+      <div class="section-header flex-between align-end">
+        <div>
+          <span class="badge badge-dourado">Mais Procurados</span>
+          <h2>Experiências Prontas para Reservar</h2>
+          <p>Selecione um passeio com horários, valores e reserva garantida via WhatsApp.</p>
+        </div>
+        <a href="experiencias.html" class="btn btn-secondary text-cafe">Ver catálogo completo →</a>
+      </div>
+
+      <div class="grid-3" id="homeFeaturedGrid">
+        <!-- Renderizado dinamicamente via home.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ROTEIROS PRONTOS -->
+  <section class="section-padded bg-cafe text-white">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-dourado">Roteiros Integrados</span>
+        <h2 class="text-white">Roteiros Prontos de 1 a 3 Dias</h2>
+        <p class="text-muted-light">Sugestões completas conectando Varginha, Três Pontas e Cambuquira com logística otimizada.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="itinerary-mini-card">
+          <span class="badge badge-dourado mb-2">1 Dia • Varginha & Três Pontas</span>
+          <h3>Imersão no Grão Perfeito</h3>
+          <p class="text-sm text-muted-light">Da degustação técnica na capital do café até o almoço típico com cafezal centenário em Três Pontas.</p>
+          <a href="roteiros.html" class="btn btn-primary btn-sm mt-4">Ver Roteiro Detalhado</a>
+        </div>
+
+        <div class="itinerary-mini-card">
+          <span class="badge badge-verde mb-2">2 Dias • Fim de Semana Completo</span>
+          <h3>Café, Tradição & Águas Curativas</h3>
+          <p class="text-sm text-muted-light">Combine a experiência sensorial das fazendas de Três Pontas com o descanso nas fontes termais de Cambuquira.</p>
+          <a href="roteiros.html" class="btn btn-primary btn-sm mt-4">Ver Roteiro Detalhado</a>
+        </div>
+
+        <div class="itinerary-mini-card">
+          <span class="badge badge-dourado mb-2">3 Dias • O Grande Circuito</span>
+          <h3>Grande Circuito dos Cafezais & Serras</h3>
+          <p class="text-sm text-muted-light">A jornada definitiva pelo Sul de Minas: colheita, cupping, queijarias, serras e imersão cultural profunda.</p>
+          <a href="roteiros.html" class="btn btn-primary btn-sm mt-4">Ver Roteiro Detalhado</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="section-padded">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-verde">Simples & Seguro</span>
+        <h2>Como Funciona a Reserva</h2>
+        <p>Transformamos passeios rurais em produtos fáceis de contratar diretamente com os operadores.</p>
+      </div>
+
+      <div class="grid-4 step-guide">
+        <div class="step-card">
+          <div class="step-icon">1</div>
+          <h4>Escolha a Experiência</h4>
+          <p class="text-sm text-muted">Filtre por cidade, categoria, duração e faixa de preço.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">2</div>
+          <h4>Veja os Detalhes</h4>
+          <p class="text-sm text-muted">Confira o que está incluso, dias de funcionamento e dicas de transporte.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">3</div>
+          <h4>Preencha a Data</h4>
+          <p class="text-sm text-muted">Informe data, número de participantes e horário desejado.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">4</div>
+          <h4>Confirme via WhatsApp</h4>
+          <p class="text-sm text-muted">A central receptiva confirma disponibilidade e pagamento direto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="logo mb-4">
+          <span class="logo-icon">☕</span>
+          <div class="logo-text">
+            <span class="logo-title">Rota do Café</span>
+            <span class="logo-subtitle">Sul de Minas</span>
+          </div>
+        </div>
+        <p class="text-sm text-muted">
+          Plataforma oficial de conexão de turistas a experiências, vivências rurais e gastronomia em <strong>Varginha</strong>, <strong>Três Pontas</strong> e <strong>Cambuquira</strong>.
+        </p>
+        <div class="footer-badges mt-4">
+          <span class="badge badge-cafe">Sebrae Minas</span>
+          <span class="badge badge-verde">Circuito das Águas</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Municípios</h4>
+        <ul>
+          <li><a href="experiencias.html?municipio=Varginha">Varginha — Capital do Café</a></li>
+          <li><a href="experiencias.html?municipio=Tr%C3%AAs+Pontas">Três Pontas — Cafés Premiados</a></li>
+          <li><a href="experiencias.html?municipio=Cambuquira">Cambuquira — Águas Minerais & Serra</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="experiencias.html?categoria=fazenda">Fazendas Históricas & Cupping</a></li>
+          <li><a href="experiencias.html?categoria=gastronomia">Gastronomia & Queijos</a></li>
+          <li><a href="experiencias.html?categoria=aventura">Aventura & Trilhas</a></li>
+          <li><a href="experiencias.html?categoria=cultural">Cultural & Artesanato</a></li>
+          <li><a href="experiencias.html?preco=free">Experiências Autoguiadas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento & Central</h4>
+        <p class="text-sm text-muted mb-3">Dúvidas sobre reservas e roteiros personalizados:</p>
+        <a href="https://wa.me/5535999887766" target="_blank" class="btn btn-whatsapp btn-sm">
+          <span>💬 Central WhatsApp</span>
+        </a>
+        <p class="text-xs text-muted mt-3">Seg a Sáb das 08h às 18h</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p class="text-xs text-muted">© 2026 Rota do Café do Sul de Minas. Projeto Piloto de Comercialização Turística.</p>
+        <p class="text-xs text-muted">Desenvolvido com padrão de excelência Sebrae.</p>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

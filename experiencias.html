@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Catálogo de Experiências — Rota do Café do Sul de Minas</title>
+  <meta name="description" content="Passeios em fazendas, degustações de café especial, trilhas e gastronomia em Varginha, Três Pontas e Cambuquira.">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">☕</span>
+        <div class="logo-text">
+          <span class="logo-title">Rota do Café</span>
+          <span class="logo-subtitle">Sul de Minas Gerais</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Início</a>
+        <a href="experiencias.html">Experiências</a>
+        <a href="roteiros.html">Roteiros Prontos</a>
+        <a href="sobre.html">Sobre a Região</a>
+        <a href="experiencias.html?preco=free" class="nav-highlight">Gratuitos</a>
+      </nav>
+      <div class="header-actions">
+        <a href="experiencias.html" class="btn btn-primary btn-sm">Explorar Passeios</a>
+        <button class="mobile-toggle" aria-label="Menu Mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="catalog-hero py-8 bg-cafe text-white">
+    <div class="container text-center">
+      <span class="badge badge-dourado">Comercialização Turística</span>
+      <h1 class="text-white mt-2">Catálogo de Experiências & Passeios</h1>
+      <p class="text-muted-light max-w-2xl mx-auto">
+        Filtre por município, estilo de vivência ou faixa de preço. Reserve com comodidade e viva o autêntico Sul de Minas.
+      </p>
+    </div>
+  </section>
+
+  <main class="section-padded">
+    <div class="container">
+      <div class="catalog-layout">
+        
+        <!-- SIDEBAR DE FILTROS -->
+        <aside class="catalog-sidebar">
+          <div class="sidebar-card">
+            <div class="flex-between mb-4">
+              <h3 class="font-bold">Filtros</h3>
+              <button id="resetFilters" class="btn-link text-xs">Limpar todos</button>
+            </div>
+
+            <!-- Busca Textual -->
+            <div class="filter-group">
+              <label for="searchInput">Buscar palavra-chave</label>
+              <input type="text" id="searchInput" placeholder="Ex: cupping, fazenda, queijo..." class="form-input">
+            </div>
+
+            <!-- Município -->
+            <div class="filter-group">
+              <label for="cityFilter">Município Prioritário</label>
+              <select id="cityFilter" class="form-select">
+                <option value="all">Todos os municípios (3)</option>
+                <option value="Varginha">Varginha</option>
+                <option value="Três Pontas">Três Pontas</option>
+                <option value="Cambuquira">Cambuquira</option>
+              </select>
+            </div>
+
+            <!-- Categoria -->
+            <div class="filter-group">
+              <label for="catFilter">Categoria</label>
+              <select id="catFilter" class="form-select">
+                <option value="all">Todas as categorias</option>
+                <option value="fazenda">☕ Fazendas de Café</option>
+                <option value="gastronomia">🍽️ Gastronomia & Queijos</option>
+                <option value="aventura">🏔️ Aventura & Natureza</option>
+                <option value="cultural">🎨 Cultural & Artesanato</option>
+                <option value="gratuita">✨ Experiências Gratuitas</option>
+              </select>
+            </div>
+
+            <!-- Faixa de Preço -->
+            <div class="filter-group">
+              <label for="priceFilter">Faixa de Preço</label>
+              <select id="priceFilter" class="form-select">
+                <option value="all">Qualquer valor</option>
+                <option value="free">Apenas Gratuitas</option>
+                <option value="0-100">Até R$ 100 / pessoa</option>
+                <option value="100-200">R$ 100 a R$ 200 / pessoa</option>
+                <option value="200+">Acima de R$ 200 / pessoa</option>
+              </select>
+            </div>
+
+            <!-- Duração -->
+            <div class="filter-group">
+              <label for="durationFilter">Duração Estimada</label>
+              <select id="durationFilter" class="form-select">
+                <option value="all">Qualquer duração</option>
+                <option value="short">Rápido (até 2 horas)</option>
+                <option value="half">Meio período (2h a 4h)</option>
+                <option value="full">Dia inteiro (4h ou mais)</option>
+              </select>
+            </div>
+
+            <!-- Checkboxes Rápidos -->
+            <div class="filter-checkboxes">
+              <label class="checkbox-label">
+                <input type="checkbox" id="guideFilter">
+                <span>Apenas com Guia Credenciado</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="freeFilter">
+                <span>Apenas Gratuitas / Autoguiadas</span>
+              </label>
+            </div>
+
+            <div class="sidebar-help mt-6">
+              <p class="text-xs text-muted">Precisa de um roteiro customizado para seu grupo ou empresa?</p>
+              <a href="https://wa.me/5535999887766" target="_blank" class="btn btn-whatsapp btn-sm w-full mt-2">
+                Falar com consultor
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- ÁREA DO GRID -->
+        <section class="catalog-content">
+          <div class="catalog-header-bar flex-between align-center mb-6">
+            <span id="resultsCount" class="font-bold text-muted">Carregando experiências...</span>
+          </div>
+
+          <div id="catalogGrid" class="grid-2 gap-6">
+            <!-- Renderizado dinamicamente via catalog.js -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="logo mb-4">
+          <span class="logo-icon">☕</span>
+          <div class="logo-text">
+            <span class="logo-title">Rota do Café</span>
+            <span class="logo-subtitle">Sul de Minas</span>
+          </div>
+        </div>
+        <p class="text-sm text-muted">
+          Plataforma oficial de conexão de turistas a experiências, vivências rurais e gastronomia em <strong>Varginha</strong>, <strong>Três Pontas</strong> e <strong>Cambuquira</strong>.
+        </p>
+        <div class="footer-badges mt-4">
+          <span class="badge badge-cafe">Sebrae Minas</span>
+          <span class="badge badge-verde">Circuito das Águas</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Municípios</h4>
+        <ul>
+          <li><a href="experiencias.html?municipio=Varginha">Varginha — Capital do Café</a></li>
+          <li><a href="experiencias.html?municipio=Tr%C3%AAs+Pontas">Três Pontas — Cafés Premiados</a></li>
+          <li><a href="experiencias.html?municipio=Cambuquira">Cambuquira — Águas Minerais & Serra</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Categorias</h4>
+        <ul>
+          <li><a href="experiencias.html?categoria=fazenda">Fazendas Históricas & Cupping</a></li>
+          <li><a href="experiencias.html?categoria=gastronomia">Gastronomia & Queijos</a></li>
+          <li><a href="experiencias.html?categoria=aventura">Aventura & Trilhas</a></li>
+          <li><a href="experiencias.html?categoria=cultural">Cultural & Artesanato</a></li>
+          <li><a href="experiencias.html?preco=free">Experiências Autoguiadas</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Atendimento & Central</h4>
+        <p class="text-sm text-muted mb-3">Dúvidas sobre reservas e roteiros personalizados:</p>
+        <a href="https://wa.me/5535999887766" target="_blank" class="btn btn-whatsapp btn-sm">
+          <span>💬 Central WhatsApp</span>
+        </a>
+        <p class="text-xs text-muted mt-3">Seg a Sáb das 08h às 18h</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container flex-between">
+        <p class="text-xs text-muted">© 2026 Rota do Café do Sul de Minas. Projeto Piloto de Comercialização Turística.</p>
+        <p class="text-xs text-muted">Desenvolvido com padrão de excelência Sebrae.</p>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>
