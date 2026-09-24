@@ -235,6 +235,7 @@
 .about-article h3 { font-family: var(--font-serif); font-size: var(--text-xl); color: var(--cafe-profundo); }
 .about-article p { color: var(--cinza-escuro); line-height: 1.8; }
 .cta-box h4 { font-family: var(--font-serif); font-size: var(--text-xl); }
+.about-article .cta-box p { color: rgba(245,237,214,0.85); }
 .travel-tips-box strong { color: var(--cafe-profundo); }
 
 /* ===== RESPONSIVE ===== */
